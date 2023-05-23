@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+
+    
+</head>
+<body>
+
+    <button class="btn">click me</button>
+
+    <h1>Welcome to javaScript</h1>
+
+    <!--alert in js-->
+
+    <button onclick="alert('hello welcome')">click me</button>
+
+    <!--change html element value-->
+
+    <h1 id="idDisplay">How are you ?</h1>
+    <button onclick="display()">click me</button>
+    <button onclick="reset()">Reset</button>
+
+    <!--add text or sentence to the end of a sentence-->
+
+    <h1 id="idAddText">Hello</h1>
+    <button id="idBtnEnd" onclick="addText()">Click me</button>
+
+    <!--Add text to the h1 element-->
+
+    <h1 id="idShowText"></h1>
+    <button onclick="showText()">Click me</button>
+
+    <!--change color in a text-->
+
+    <h1 style="color: black;" id="idChangeColor">Color Changing</h1>
+    <button onclick="changeColor()">Click me</button>
+
+    <!--hide element-->
+
+    <br><br>
+    <button onclick="hide()">hide me</button>
+    <h1 id="idHide">I am going to hide</h1>
+
+    <!--get user input and show using input-->
+
+    <input id="idGetName" type="text">
+    <button onclick="showInput()">submit</button>
+    <h1 id="idInputName"></h1>
+
+    <!--get user input and show it with additional text-->
+
+    <input id="idTextBox" type="text" placeholder="Enter Your Name">
+    <button onclick="showUserInput()">click me</button>
+    <h1 id="idOutput"></h1>
+
+    <!--create array and show them in console-->
+
+    <h2>Arrays in javaScript</h2>
+    <button onclick="showArray()">click me</button>
+
+    <!--if else checking -->
+
+    <br><br><br>
+    <label for="username">User Name : </label>
+    <input id="idUserName" type="text">
+    <br><br>
+    <label for="password">Password : &nbsp; </label>
+    <input id="idPassword" type="password">
+    <br><br>
+    <button onclick="loginPage()">Log in</button>
+
+    
+    <!--call seperate html file-->
+
+    <h1>Go to another html page</h1>
+    <button onclick="page2()">Next</button>
+
+    <!--random number in Math function-->
+    <h1>Random Number Check</h1>
+    <input id="idGetNumber" type="number" min="1" max="10">
+    <button onclick="randomNumChecker()">play</button>
+
+
+    
+
+    <script type="text/javaScript">
+        
+
+        function display(){
+            document.getElementById('idDisplay').innerHTML = "I am fine";
+        }
+
+        function reset(){
+            document.getElementById('idDisplay').innerHTML = "How are You?";
+        }
+
+        function addText(){
+            document.getElementById("idAddText").innerHTML += " Welcome to JS Practice";
+            document.getElementById("idBtnEnd").onclick = "";  // remove the button onclick property
+
+        }
+
+        function showText() {
+            document.getElementById("idShowText").innerHTML = "Hi welcome to the MERN Stack Developing";
+        }
+
+        function changeColor(){
+            document.getElementById("idChangeColor").style.color = "red";
+        }
+
+        function hide(){
+            document.getElementById("idHide").style.display = "none";
+        }
+
+        function showInput(){
+            let name = document.getElementById("idGetName").value;
+            document.getElementById("idInputName").innerHTML = name;
+        }
+
+        function showUserInput() {
+            let  name = document.getElementById("idTextBox").value;
+            document.getElementById("idOutput").innerHTML = "Hello " + name + " !";           
+        }
+
+        function showArray(){
+            // create an array
+            let array1 = ["apple","samsung","nokia"];
+            console.log(array1);  // display array in console/
+
+            // add new element to end of the array
+             array1.push("huawe");
+             console.log(array1);
+
+             // remove element from array
+             array1.splice(1,1);
+             console.log(array1);
+
+             // adda new element to the array
+             array1.splice(1,0, "lts1"); // add new element before the given index
+             console.log(array1);
+
+             array1.splice(1,1, "lts2"); // update the given index with new element
+             console.log(array1);
+
+             array1.splice(1,2, "lts3"); // remove 2 element from given index and update new element
+             console.log(array1);
+
+
+        }
+
+        function loginPage(){
+            let userName = document.getElementById("idUserName").value;
+            let password = document.getElementById("idPassword").value;
+
+            let uName = "sanchitha";
+            let pWord = "123";
+
+            if (userName == uName  && password == pWord ){
+                alert("Login Successfuly");
+                
+            }
+            else{
+                alert("Login Failed");
+            }
+        }
+
+        function page2() {
+            window.location.href = "page2.html";
+            
+        }
+
+        function randomNumChecker(){
+            
+            let x = document.getElementById("idGetNumber").value;
+
+            let y = Math.floor(Math.random()* 10);
+
+            if (x == y){
+                alert("You are Lucky ! Your Number is correct");
+            }
+            else{
+                alert(`you are unlucky ! I guess number ${y}`);
+            }
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
