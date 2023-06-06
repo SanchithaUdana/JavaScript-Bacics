@@ -86,6 +86,20 @@ newFun2('amal');
 
 console.log(newFun3('kamal'));
 
-console.error("404 not found");
-console.warn("warning");
+console.error("js error");
+console.warn("js warning");
 console.log(details);
+
+// create an object
+var student1 = new Object();
+var student2 = {};
+var student3 = {
+    "name":"sanchitha",
+    "age":21,
+    "dep":"ict"
+};
+
+console.log(student3.name);
+
+
+
