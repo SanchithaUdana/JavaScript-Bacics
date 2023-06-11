@@ -96,8 +96,10 @@ var student3 = {
   dep: "ict",
 };
 
+// function property in an a object
 student2.addingNum = function () {
   console.log("hello this is function in an object");
 };
 
 student2.addingNum();
+
