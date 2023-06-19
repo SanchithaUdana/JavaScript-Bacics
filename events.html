@@ -15,8 +15,8 @@
 
                 <button onclick="alert('button 01 was cliked')" class="btn btn-primary">Button 01</button>
                 <button id="button2" class="btn btn-danger">Button 02</button>
-                <button id="button3" class="btn btn-primary">Button 03</button>
-                <button id="button3" class="btn btn-primary">Button 04</button>
+                <button id="button3" class="btn btn-warning">Button 03</button>
+                <button id="button4" class="btn btn-secondary">Button 04</button>
 
             </div>
         </div>
@@ -63,11 +63,16 @@
         mybtn3.addEventListener("click", showButton3);
 
         function showButton3() {
-            console.log("button 3 was clicked");
+            console.log("button 3 clicked");
         }
 
         // button 04
-        
+        var mybtn4 = document.getElementById("button4");
+        mybtn4.addEventListener("click", showButton4);
+
+        function showButton4(){
+            console.log("button 4 clicked");
+        }
 
     </script>
 
