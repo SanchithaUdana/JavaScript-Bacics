@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center">
+        <div class="raw">
+            <div class="col">
+
+                <button onclick="alert('button 01 was cliked')" class="btn btn-primary">Button 01</button>
+                <button id="button2" class="btn btn-danger">Button 02</button>
+                <button id="button3" class="btn btn-primary">Button 03</button>
+                <button id="button3" class="btn btn-primary">Button 04</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        //                                          Events
+        //                                          ------
+
+        // Have Two type of Events in javascript
+        // we called that listlen to Events
+
+        // 01. using HTML Elements
+        // ex - <a onclick="doSomething()"> </a>
+
+        // 02. using addEventListener("event", function());
+        // element.addEventsListener("click", doSomething()); 
+
+        // Example events : 
+        // * - click
+        // * - mouseover
+        // * - keyup
+        // * - keydown
+        // * - change
+
+
+        // button 01
+        var mybtn2 = document.getElementById("button2");
+
+        mybtn2.addEventListener("click", doSomething);
+
+        function doSomething(event) {
+            console.log(event);
+        }
+
+        // button 02
+        document.addEventListener("keyup", function (event) {
+            console.log(event.keyCode, event.key);
+        })
+
+        // button 03
+        var mybtn3 = document.getElementById("button3");
+        mybtn3.addEventListener("click", showButton3);
+
+        function showButton3() {
+            console.log("button 3 was clicked");
+        }
+
+        // button 04
+        
+
+    </script>
+
+</body>
+
+</html>
