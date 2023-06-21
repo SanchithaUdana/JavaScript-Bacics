@@ -43,20 +43,19 @@
         // * - keydown
         // * - change
 
+        // background keyboard detect
 
-        // button 01
+        document.addEventListener("keyup", function (event) {
+            console.log(event.keyCode, event.key);
+        })
+
+        // button 02
         var mybtn2 = document.getElementById("button2");
-
         mybtn2.addEventListener("click", doSomething);
 
         function doSomething(event) {
             console.log(event);
         }
-
-        // button 02
-        document.addEventListener("keyup", function (event) {
-            console.log(event.keyCode, event.key);
-        })
 
         // button 03
         var mybtn3 = document.getElementById("button3");
@@ -73,6 +72,8 @@
         function showButton4() {
             console.log("button 4 clicked");
         }
+
+
 
     </script>
 
